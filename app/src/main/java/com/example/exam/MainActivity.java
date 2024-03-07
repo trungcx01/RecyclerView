@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(int position) {
                 btnUpdate.setEnabled(true);
+                btnAdd.setEnabled(false);
                 currentPosition = position;
                 Tour tour = adapter.getItem(position);
                 int img = tour.getImgTransport();
@@ -60,6 +61,10 @@ public class MainActivity extends AppCompatActivity {
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (eTime.getText().toString().isEmpty() || eName.getText().toString().isEmpty()){
+                    Toast.makeText(getApplicationContext(), "Vui lòng không để trống", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 Tour tour = new Tour();
                 try{
                     tour.setName(eName.getText().toString());
@@ -79,6 +84,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Tour tour = new Tour();
+                if (eTime.getText().toString().isEmpty() || eName.getText().toString().isEmpty()){
+                    Toast.makeText(getApplicationContext(), "Vui lòng không để trống", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 try{
                     tour.setName(eName.getText().toString());
                     tour.setTime(eTime.getText().toString());

@@ -59,7 +59,7 @@ public class TourAdapter extends RecyclerView.Adapter<TourAdapter.TourViewHolder
             public void onClick(View view) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(context);
                 builder.setTitle("Warning");
-                builder.setMessage("Bạn có chắc chắn muốn xóa" + tour.getName() + "không?");
+                builder.setMessage("Bạn có chắc chắn muốn xóa \"" + tour.getName() + "\" không?");
                 builder.setIcon(R.drawable.th);
                 builder.setPositiveButton("Có", new DialogInterface.OnClickListener() {
                     @Override
