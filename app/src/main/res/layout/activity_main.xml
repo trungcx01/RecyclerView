@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nhập Liệu:"
+        android:gravity="center_horizontal">
+    </TextView>
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        >
+    </Spinner>
+
+    <EditText
+        android:id="@+id/eName"
+        android:hint="Nhập tên tour"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </EditText>
+
+    <EditText
+        android:id="@+id/eTime"
+        android:hint="Nhập thời gian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </EditText>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_marginRight="60dp"
+            android:layout_marginLeft="50dp"
+            android:text="Add"
+            android:layout_width="80dp"
+            android:layout_height="50dp">
+        </Button>
+
+        <Button
+            android:id="@+id/btnUpdate"
+            android:layout_marginRight="60dp"
+            android:text="Update"
+            android:layout_width="100dp"
+            android:layout_height="50dp">
+        </Button>
+    </LinearLayout>
+    <SearchView
+        android:id="@+id/searchView"
+        android:queryHint="Search here"
+        android:iconifiedByDefault="false"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </SearchView>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+</LinearLayout>
